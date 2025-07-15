@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/transactions.css" />
+    <link rel="icon" href="../assets/icons/logo.svg" type="image/svg" />
+    <title>ტრანზაქციები - Virtual Bank</title>
+  </head>
+  <body>
+    <!-- MOBILE NAVIGATION ELEMENTS -->
+    <input type="checkbox" id="mobile-nav-toggle" />
+    <label for="mobile-nav-toggle" class="mobile-nav-toggle-label">
+      <span></span>
+    </label>
+    <div class="nav-overlay"></div>
+
+    <div class="container transactions-container-layout">
+      <!-- NAVIGATION SIDEBAR -->
+      <nav class="nav">
+        <div class="logo flex-row">
+          <img src="../assets/icons/logo.svg" alt="Virtual Bank Logo" />
+          <span class="logo-text">Virtual Bank</span>
+        </div>
+
+        <div class="profile flex-column">
+          <img src="../assets/images/user.jpg" alt="Profile Icon" />
+          <h3>სახელი გვარი</h3>
+          <button class="btn logout-btn">
+            <span class="btn-text">გასვლა</span>
+          </button>
+        </div>
+
+        <ul class="nav-list flex-column">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">
+              <img src="../assets/icons/house-solid.svg" alt="" />
+              მთავარი</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="../assets/icons/user-regular.svg" alt="" />
+              ჩემი პროდუქტები</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="../assets/icons/paper-plane-regular.svg" alt="" />
+              გადარიცხვები</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a href="transactions.html" class="nav-link">
+              <img src="../assets/icons/rectangle-list-regular.svg" alt="" />
+              ტრანზაქციები</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="../assets/icons/compass-regular.svg" alt="" />
+              ჩემი ფინანსები</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="../assets/icons/gem-regular.svg" alt="" />
+              შეთავაზებები</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- MAIN CONTENT -->
+      <main class="main transactions-page flex-column">
+        <h1 class="page-title">ტრანზაქციების ისტორია</h1>
+
+        <!-- FILTER SECTION -->
+        <div class="transactions-filter">
+          <div class="filter-buttons">
+            <button class="filter-btn active">მიმდინარე დღე</button>
+            <button class="filter-btn">1 კვირა</button>
+            <button class="filter-btn">1 თვე</button>
+          </div>
+
+          <div class="date-filter">
+            <div class="date-range">
+              <div class="date-input-group">
+                <label for="date-from">დან:</label>
+                <input
+                  type="date"
+                  id="date-from"
+                  class="date-input"
+                  value="2025-07-01" />
+              </div>
+              <div class="date-input-group">
+                <label for="date-to">მდე:</label>
+                <input
+                  type="date"
+                  id="date-to"
+                  class="date-input"
+                  value="2025-07-15" />
+              </div>
+            </div>
+
+            <div class="search-filter">
+              <input type="text" placeholder="ძებნა..." class="search-input" />
+              <button class="search-btn">
+                <img
+                  src="../assets/icons/magnifying-glass-solid.svg"
+                  alt="Search" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRANSACTIONS LIST -->
+        <div class="transactions-container">
+          <div class="transactions-header">
+            <div class="transaction-col">ტიპი</div>
+            <div class="transaction-col">თარიღი</div>
+            <div class="transaction-col">აღწერა</div>
+            <div class="transaction-col">თანხა</div>
+          </div>
+
+          <div class="transactions-list full-history">
+            <div class="transaction-date-group">
+              <div class="date-group-header">15 ივლ, 2025 (დღეს)</div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon income">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 5v14M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">15 ივლ, 14:32</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">ხელფასი</div>
+                  <div class="transaction-meta">
+                    თიბისი ბანკი | ანგარიში **** 1234
+                  </div>
+                </div>
+                <div class="transaction-amount income">+2,500 ₾</div>
+              </div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">15 ივლ, 11:21</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">კაფე - ენტრე</div>
+                  <div class="transaction-meta">VISA | ბარათი **** 5678</div>
+                </div>
+                <div class="transaction-amount expense">-32.50 ₾</div>
+              </div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">15 ივლ, 09:15</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">საწვავი - გალფი</div>
+                  <div class="transaction-meta">
+                    MasterCard | ბარათი **** 9012
+                  </div>
+                </div>
+                <div class="transaction-amount expense">-85.00 ₾</div>
+              </div>
+            </div>
+
+            <div class="transaction-date-group">
+              <div class="date-group-header">14 ივლ, 2025</div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">14 ივლ, 18:44</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">მაღაზია - კარფური</div>
+                  <div class="transaction-meta">VISA | ბარათი **** 5678</div>
+                </div>
+                <div class="transaction-amount expense">-185.45 ₾</div>
+              </div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">14 ივლ, 12:30</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">კომუნალური - წყალი</div>
+                  <div class="transaction-meta">
+                    ავტომატური გადახდა | ანგარიში **** 1234
+                  </div>
+                </div>
+                <div class="transaction-amount expense">-45.20 ₾</div>
+              </div>
+            </div>
+
+            <div class="transaction-date-group">
+              <div class="date-group-header">12 ივლ, 2025</div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon income">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 5v14M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">12 ივლ, 16:05</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">
+                    გადმორიცხვა - დავით გიორგაძე
+                  </div>
+                  <div class="transaction-meta">
+                    P2P გადმორიცხვა | ანგარიში **** 1234
+                  </div>
+                </div>
+                <div class="transaction-amount income">+350.00 ₾</div>
+              </div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">12 ივლ, 11:32</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">რესტორანი - შემოიხედე</div>
+                  <div class="transaction-meta">VISA | ბარათი **** 5678</div>
+                </div>
+                <div class="transaction-amount expense">-120.80 ₾</div>
+              </div>
+            </div>
+
+            <div class="transaction-date-group">
+              <div class="date-group-header">10 ივლ, 2025</div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">10 ივლ, 19:45</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">კინოთეატრი - კავეა</div>
+                  <div class="transaction-meta">
+                    MasterCard | ბარათი **** 9012
+                  </div>
+                </div>
+                <div class="transaction-amount expense">-35.00 ₾</div>
+              </div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">10 ივლ, 14:22</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">ინტერნეტი - მაგთი</div>
+                  <div class="transaction-meta">
+                    ავტომატური გადახდა | ანგარიში **** 1234
+                  </div>
+                </div>
+                <div class="transaction-amount expense">-75.00 ₾</div>
+              </div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">10 ივლ, 09:17</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">აფთიაქი - ავერსი</div>
+                  <div class="transaction-meta">VISA | ბარათი **** 5678</div>
+                </div>
+                <div class="transaction-amount expense">-48.75 ₾</div>
+              </div>
+            </div>
+
+            <div class="transaction-date-group">
+              <div class="date-group-header">8 ივლ, 2025</div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon income">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 5v14M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">8 ივლ, 10:08</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">გადმორიცხვა - პირადი</div>
+                  <div class="transaction-meta">
+                    საერთაშორისო გადმორიცხვა | ანგარიში **** 1234
+                  </div>
+                </div>
+                <div class="transaction-amount income">+150.00 ₾</div>
+              </div>
+            </div>
+
+            <div class="transaction-date-group">
+              <div class="date-group-header">5 ივლ, 2025</div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">5 ივლ, 16:40</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">
+                    კომუნალური - ელექტროენერგია
+                  </div>
+                  <div class="transaction-meta">
+                    ავტომატური გადახდა | ანგარიში **** 1234
+                  </div>
+                </div>
+                <div class="transaction-amount expense">-57.80 ₾</div>
+              </div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">5 ივლ, 12:15</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">მობილური - მაგთი</div>
+                  <div class="transaction-meta">
+                    ავტომატური გადახდა | ანგარიში **** 1234
+                  </div>
+                </div>
+                <div class="transaction-amount expense">-25.00 ₾</div>
+              </div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon income">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 5v14M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">5 ივლ, 09:30</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">კეშბექი</div>
+                  <div class="transaction-meta">
+                    ბონუს პროგრამა | ბარათი **** 5678
+                  </div>
+                </div>
+                <div class="transaction-amount income">+24.50 ₾</div>
+              </div>
+            </div>
+
+            <div class="transaction-date-group">
+              <div class="date-group-header">1 ივლ, 2025</div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">1 ივლ, 11:20</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">სესხი - შენატანი</div>
+                  <div class="transaction-meta">
+                    ავტომატური გადახდა | სესხი **** 3433
+                  </div>
+                </div>
+                <div class="transaction-amount expense">-750.00 ₾</div>
+              </div>
+
+              <div class="transaction-item">
+                <div class="transaction-icon income">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 5v14M5 12h14"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+                <div class="transaction-date">1 ივლ, 09:00</div>
+                <div class="transaction-details">
+                  <div class="transaction-name">ხელფასი</div>
+                  <div class="transaction-meta">
+                    თიბისი ბანკი | ანგარიში **** 1234
+                  </div>
+                </div>
+                <div class="transaction-amount income">+2,500 ₾</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-contact">
+            <p class="footer-title">დაგვიკავშირდით:</p>
+            <a href="tel:#7999" class="footer-phone">#7999</a>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-icon">
+              <img src="../assets/icons/facebook-f-brands.svg" alt="Facebook" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="../assets/icons/twitter-brands.svg" alt="Twitter" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="../assets/icons/instagram-brands.svg" alt="Instagram" />
+            </a>
+            <a href="#" class="social-icon">
+              <img
+                src="../assets/icons/linkedin-in-brands.svg"
+                alt="LinkedIn" />
+            </a>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; 2025 Virtual Bank. ყველა უფლება დაცულია.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

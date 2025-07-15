@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Virtual Bank - თანამედროვე ინტერნეტ ბანკი პირადი ფინანსების მართვისთვის. გადარიცხვები, გადახდები, ტრანზაქციების ისტორია და მეტი." />
+    <meta
+      name="keywords"
+      content="ინტერნეტ ბანკი, ონლაინ ბანკინგი, გადარიცხვები, ფინანსების მართვა, Virtual Bank, საბანკო სერვისები" />
+    <meta name="author" content="Virtual Bank" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://virtualbank.github/" />
+    <meta
+      property="og:title"
+      content="Virtual Bank - თქვენი ფინანსების მართვის პლატფორმა" />
+    <meta
+      property="og:description"
+      content="თანამედროვე ინტერნეტ ბანკი პირადი ფინანსების მართვისთვის. გადარიცხვები, გადახდები, ტრანზაქციების ისტორია და მეტი." />
+    <meta property="og:image" content="/assets/icons/logo.svg" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Virtual Bank - თქვენი ფინანსების მართვის პლატფორმა" />
+    <meta
+      name="twitter:description"
+      content="თანამედროვე ინტერნეტ ბანკი პირადი ფინანსების მართვისთვის. გადარიცხვები, გადახდები, ტრანზაქციების ისტორია და მეტი." />
+    <meta name="twitter:image" content="/assets/icons/logo.svg" />
+
+    <!-- Additional SEO Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Language" content="ka" />
+    <link rel="canonical" href="https://virtualbank.github/" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="shortcut icon" href="assets/icons/eu.svg" type="image/x-icon" />
+
+    <!-- Title -->
+    <title>Virtual Bank</title>
+  </head>
+
+  <body>
+    <!-- MOBILE NAVIGATION checkbox -->
+    <input type="checkbox" id="mobile-nav-toggle" />
+    <label for="mobile-nav-toggle" class="mobile-nav-toggle-label">
+      <span></span>
+    </label>
+    <div class="nav-overlay"></div>
+
+    <div class="container">
+      <!-- NAVIGATION SIDEBAR -->
+      <nav class="nav">
+        <div class="logo flex-row">
+          <img src="assets/icons/logo.svg" alt="Virtual Bank Logo" />
+          <span class="logo-text">Virtual Bank</span>
+        </div>
+
+        <div class="profile flex-column">
+          <img src="assets/images/user.jpg" alt="Profile Icon" />
+          <h3>სახელი გვარი</h3>
+          <button class="btn logout-btn">
+            <span class="btn-text">გასვლა</span>
+          </button>
+        </div>
+
+        <ul class="nav-list flex-column">
+          <li class="nav-item active">
+            <a href="index.html" class="nav-link">
+              <img src="assets/icons/house-solid.svg" alt="" />
+              მთავარი</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="assets/icons/user-regular.svg" alt="" />
+              ჩემი პროდუქტები</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="assets/icons/paper-plane-regular.svg" alt="" />
+              გადარიცხვები</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="pages/transactions.html" class="nav-link">
+              <img src="assets/icons/rectangle-list-regular.svg" alt="" />
+              ტრანზაქციები</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="assets/icons/compass-regular.svg" alt="" />
+              ჩემი ფინანსები</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="assets/icons/gem-regular.svg" alt="" />
+              შეთავაზებები</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- MAIN CONTENT -->
+      <main class="main flex-column">
+        <!-- ACCOUNTS SECTION -->
+        <section class="accounts flex-row">
+          <div class="account-card flex-column">
+            <p class="card-balance">ნაშთი:</p>
+            <p class="card-amount">1800 ₾</p>
+            <div class="card-type flex-row">
+              <img src="assets/icons/credit-card-solid.svg" alt="Card Icon" />
+              <span class="card-type-text">ბარათი</span>
+              <span class="account-number">**** 1234</span>
+            </div>
+            <img
+              src="assets/icons/eye-slash-regular.svg"
+              alt="balance visibility icon"
+              class="card-visibility" />
+          </div>
+
+          <div class="account-card flex-column">
+            <p class="card-balance">ნაშთი:</p>
+            <p class="card-amount loan">-28 547 ₾</p>
+            <div class="card-type flex-row">
+              <img
+                src="assets/icons/money-bill-transfer-solid.svg"
+                alt="Card Icon" />
+              <span class="card-type-text">სესხი</span>
+              <span class="account-number">**** 3433</span>
+            </div>
+            <img
+              src="assets/icons/eye-slash-regular.svg"
+              alt="balance visibility icon"
+              class="card-visibility" />
+          </div>
+
+          <div class="account-card flex-column">
+            <p class="card-balance">ნაშთი:</p>
+            <p class="card-amount">10 000 €</p>
+            <div class="card-type flex-row">
+              <img src="assets/icons/wallet-solid.svg" alt="Card Icon" />
+              <span class="card-type-text">დეპოზიტი</span>
+              <span class="account-number">**** 1111</span>
+            </div>
+            <img
+              src="assets/icons/eye-slash-regular.svg"
+              alt="balance visibility icon"
+              class="card-visibility" />
+          </div>
+        </section>
+
+        <!-- UTILITIES SECTION -->
+        <section class="utilities flex-row">
+          <!-- FAVORITES SECTION -->
+          <div class="favorites">
+            <div class="speed-dial">
+              <img src="assets/icons/circle-user-regular.svg" alt="Transfer" />
+              <span class="speed-dial-title">გადარიცხვა</span>
+            </div>
+            <div class="speed-dial">
+              <img src="assets/icons/logo.svg" alt="Payment" />
+              <span class="speed-dial-title">გადახდა</span>
+            </div>
+            <div class="speed-dial">
+              <img src="assets/icons/bell-regular.svg" alt="Mobile" />
+              <span class="speed-dial-title">მობილური</span>
+            </div>
+            <div class="speed-dial">
+              <img src="assets/icons/clock-regular.svg" alt="Card" />
+              <span class="speed-dial-title">ბარათი</span>
+            </div>
+            <div class="speed-dial">
+              <img src="assets/icons/hand-point-up-regular.svg" alt="Loan" />
+              <span class="speed-dial-title">სესხი</span>
+            </div>
+            <div class="speed-dial">
+              <img src="assets/icons/envelope-open-regular.svg" alt="Deposit" />
+              <span class="speed-dial-title">დეპოზიტი</span>
+            </div>
+            <div class="speed-dial">
+              <img
+                src="assets/icons/comments-regular.svg"
+                alt="Currency Exchange" />
+              <span class="speed-dial-title">კონვერტაცია</span>
+            </div>
+            <div class="speed-dial">
+              <img src="assets/icons/futbol-regular.svg" alt="Investments" />
+              <span class="speed-dial-title">ინვესტიცია</span>
+            </div>
+            <div class="speed-dial">
+              <img src="assets/icons/square-plus-regular.svg" alt="Add More" />
+              <span class="speed-dial-title">დამატება</span>
+            </div>
+          </div>
+
+          <!-- INFO CARDS SECTION -->
+          <div class="add-info">
+            <div class="info-card">
+              <div class="info-card-title">საპენსიო დანაზოგი</div>
+              <div class="info-card-content">
+                <div class="pension-chart">
+                  <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path
+                      class="circle-bg"
+                      d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path
+                      class="circle"
+                      stroke-dasharray="75, 100"
+                      d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <span class="pension-percentage">აქტიური</span>
+                </div>
+                <div class="info-card-amount">15,230 ₾</div>
+              </div>
+              <a href="#" class="info-card-link">
+                დეტალურად
+                <img src="assets/icons/chevron-right-solid.svg" alt="Details" />
+              </a>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-title">ვალუტის კურსი</div>
+              <div class="currency-rates">
+                <div class="currency-rate">
+                  <img
+                    src="assets/icons/us.svg"
+                    alt="USD"
+                    class="currency-flag" />
+                  <span class="currency-code">USD</span>
+                  <span class="currency-value">2.73 - 2.78</span>
+                  <div class="currency-change down">
+                    <img src="assets/icons/arrow-down-solid.svg" alt="Down" />
+                    <span>0.05</span>
+                  </div>
+                </div>
+
+                <div class="currency-rate">
+                  <img
+                    src="assets/icons/eu.svg"
+                    alt="EUR"
+                    class="currency-flag" />
+                  <span class="currency-code">EUR</span>
+                  <span class="currency-value">3.01 - 3.06</span>
+                  <div class="currency-change up">
+                    <img src="assets/icons/arrow-up-solid.svg" alt="Up" />
+                    <span>0.02</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RECENT TRANSACTIONS SECTION -->
+        <section class="recent-transactions">
+          <div class="section-header">
+            <h2 class="section-title">ბოლო ტრანზაქციები</h2>
+            <a href="pages/transactions.html" class="view-all-link">
+              ყველას ნახვა
+              <img src="assets/icons/chevron-right-solid.svg" alt="View All" />
+            </a>
+          </div>
+
+          <div class="transactions-list">
+            <div class="transaction-item">
+              <div class="transaction-icon income">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 5v14M5 12h14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">ხელფასი</div>
+                <div class="transaction-date">14 ივლ, 2025</div>
+              </div>
+              <div class="transaction-amount income">+2,500 ₾</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon expense">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M5 12h14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">მაღაზია - კარფური</div>
+                <div class="transaction-date">12 ივლ, 2025</div>
+              </div>
+              <div class="transaction-amount expense">-185.45 ₾</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon expense">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M5 12h14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">რესტორანი</div>
+                <div class="transaction-date">10 ივლ, 2025</div>
+              </div>
+              <div class="transaction-amount expense">-276.20 ₾</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon income">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 5v14M5 12h14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">გადმორიცხვა - პირადი</div>
+                <div class="transaction-date">8 ივლ, 2025</div>
+              </div>
+              <div class="transaction-amount income">+150 ₾</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon expense">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M5 12h14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="transaction-details">
+                <div class="transaction-name">კომუნალური - ელექტროენერგია</div>
+                <div class="transaction-date">5 ივლ, 2025</div>
+              </div>
+              <div class="transaction-amount expense">-57.80 ₾</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar flex-column">
+        <!-- BONUS POINTS SECTION -->
+        <section class="bonus">
+          <div class="chart-card">
+            <h3 class="chart-title">ერთგული ბარათი</h3>
+            <div class="chart-content">
+              <div class="bonus-content">
+                <div class="bonus-icon">
+                  <img
+                    src="assets/images/smart-club-new.svg"
+                    alt="Bonus Icon" />
+                </div>
+                <div class="bonus-info">
+                  <div class="bonus-label">ქულა:</div>
+                  <div class="bonus-value">140</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CHARTS SECTION -->
+        <section class="charts">
+          <div class="chart-card">
+            <h3 class="chart-title">ივლისის ხარჯები</h3>
+            <div class="chart-content">
+              <div class="donut-chart-container">
+                <svg viewBox="0 0 36 36" class="donut-chart">
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="15.9155"
+                    fill="none"
+                    stroke="oklch(20.841% 0.04169 266.371)"
+                    stroke-width="0.8"
+                    class="donut-ring" />
+
+                  <circle
+                    class="donut-segment"
+                    cx="18"
+                    cy="18"
+                    r="15.9155"
+                    fill="none"
+                    stroke-width="3.8"
+                    stroke="oklch(56.658% 0.22552 28.561)"
+                    stroke-dasharray="35 65"
+                    stroke-dashoffset="0" />
+
+                  <circle
+                    class="donut-segment"
+                    cx="18"
+                    cy="18"
+                    r="15.9155"
+                    fill="none"
+                    stroke-width="3.8"
+                    stroke="oklch(51.296% 0.23595 266.323)"
+                    stroke-dasharray="25 75"
+                    stroke-dashoffset="-35" />
+
+                  <circle
+                    class="donut-segment"
+                    cx="18"
+                    cy="18"
+                    r="15.9155"
+                    fill="none"
+                    stroke-width="3.8"
+                    stroke="oklch(43.547% 0.16764 336.172)"
+                    stroke-dasharray="20 80"
+                    stroke-dashoffset="-60" />
+
+                  <circle
+                    class="donut-segment"
+                    cx="18"
+                    cy="18"
+                    r="15.9155"
+                    fill="none"
+                    stroke-width="3.8"
+                    stroke="oklch(39.8% 0.195 277.366)"
+                    stroke-dasharray="20 80"
+                    stroke-dashoffset="-80" />
+                </svg>
+
+                <div class="donut-center">
+                  <div class="donut-total">1875</div>
+                  <div class="donut-currency">ლარი</div>
+                </div>
+              </div>
+
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <div class="legend-color legend-color-food"></div>
+                  <div class="legend-text">საკვები</div>
+                  <div class="legend-value">850 ₾</div>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color legend-color-utilities"></div>
+                  <div class="legend-text">კომუნალური</div>
+                  <div class="legend-value">150 ₾</div>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color legend-color-transport"></div>
+                  <div class="legend-text">ტრანსპორტი</div>
+                  <div class="legend-value">200 ₾</div>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color legend-color-other"></div>
+                  <div class="legend-text">სხვა</div>
+                  <div class="legend-value">515 ₾</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-contact">
+            <p class="footer-title">დაგვიკავშირდით:</p>
+            <a href="tel:#7999" class="footer-phone">#7999</a>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-icon">
+              <img src="assets/icons/facebook-f-brands.svg" alt="Facebook" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="assets/icons/twitter-brands.svg" alt="Twitter" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="assets/icons/instagram-brands.svg" alt="Instagram" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="assets/icons/linkedin-in-brands.svg" alt="LinkedIn" />
+            </a>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; 2025 Virtual Bank. ყველა უფლება დაცულია.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
